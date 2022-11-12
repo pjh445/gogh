@@ -13,11 +13,12 @@ $(document).ready(function(){//시작
 	$("header button").click(function(){
 		i++;
 		if( i==1 ){
+			$("embed", parent.document).css({"height":"70vh"});	
 			$("nav").slideDown("fast");
 			$(this).text("close");
-			$("embed", parent.document).css({"height":"70vh"});			
+					
 		}else{
-			$("nav").slideUp("slow" , function(){
+			$("nav").slideUp("fast" , function(){
 					$(this).text("menu");
 				$("embed", parent.document).css({"height":"51.9pt"});
 				i = 0;
