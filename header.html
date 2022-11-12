@@ -13,14 +13,17 @@ $(document).ready(function(){//시작
 	$("header button").click(function(){
 		i++;
 		if( i==1 ){
-			$("nav").slideDown();
-			$(this).text("close");
-			$("embed", parent.document).css({"height":"70vh"});			
+			$("nav").slideDown("slow" , function(){
+					$("header button").text("close");
+					$("embed", parent.document).css({"height":"70vh"});	
+			});
+					
 		}else{
-			$("nav").slideUp();
-			$(this).text("menu");
-			$("embed", parent.document).css({"height":"51.9pt"});
-			i = 0;
+			$("nav").slideUp("fast" , function(){
+					$("header button").text("menu");
+				$("embed", parent.document).css({"height":"51.9pt"});
+				i = 0;
+			});			
 		}		
 	});
 });//끝
