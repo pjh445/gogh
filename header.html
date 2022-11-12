@@ -14,11 +14,11 @@ $(document).ready(function(){//시작
 		i++;
 		if( i==1 ){
 			$("embed", parent.document).css({"height":"500pt"});	
-			$("nav").slideDown("fast");
+			$("nav").stop().slideDown("fast");
 			$("header button").text("close");
 					
 		}else{			
-			$("nav").slideUp("fast" , function(){
+			$("nav").stop().slideUp("fast" , function(){
 				$("header button").text("menu");
 				$("embed", parent.document).css({"height":"51.9pt"});			
 				i = 0;				
