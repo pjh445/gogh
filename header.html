@@ -17,12 +17,12 @@ $(document).ready(function(){//시작
 			$("nav").slideDown("fast");
 			$("header button").text("close");
 					
-		}else{
-			i = 0;
+		}else{			
 			$("nav").slideUp("fast" , function(){
 				$("header button").text("menu");
-				$("embed", parent.document).css({"height":"51.9pt"});				
-			});			
+				$("embed", parent.document).css({"height":"51.9pt"});			
+				i = 0;				
+			});				
 		}		
 	});
 });//끝
